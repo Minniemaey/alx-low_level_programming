@@ -35,7 +35,8 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	if (argc == 3)lkmul = atoi(num1) * atoi(num2);
+	if (argc == 3)
+		mul = atoi(num1) * atoi(num2);
 		printf("%d\n", mul);
 
 	return (0);
