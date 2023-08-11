@@ -36,8 +36,10 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (argc == 3)
+	{
 		mul = atoi(num1) * atoi(num2);
 		printf("%d\n", mul);
+	}
 
 	return (0);
 }
