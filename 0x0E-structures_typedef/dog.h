@@ -7,6 +7,7 @@
  * @age: dog age
  * @owner: dog owner
  *
+ * Description: Longer description
  */
 struct dog
 {
@@ -16,7 +17,7 @@ struct dog
 };
 
 /**
- * dog_t - typedef for struct dog
+ * dog_t - typedef struct dog
  */
 
 typedef struct dog dog_t;
