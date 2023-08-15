@@ -3,10 +3,10 @@
 
 /**
  * *new_dog - function that creates a new dog.
- *
  * @name: dog name.
  * @age: dog age.
  * @owner: dog owner.
+ *
  * Return: pointer to new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
@@ -42,9 +42,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog->owner);
 		return (NULL);
 	}
-	for (i = 0; i <= len_name; i++)
-		new_dog->name[i] = name[i];
-	for (i = 0; i <= len_owner; i++)
-		new_dog->owner[i] = owner[i];
+	for (a = 0; a <= len_name; a++)
+		new_dog->name[a] = name[a];
+	for (a = 0; a <= len_owner; a++)
+		new_dog->owner[a] = owner[a];
 	return (new_dog);
 }
