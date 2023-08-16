@@ -11,10 +11,10 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
-	int (*operator)(int, int);
+	char *operator;
 
 	if (argc != 4)
 	{
@@ -26,12 +26,13 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 
-	if ((get_op_func(operator) == NULL) || (argv[2][1]))
+	if ((get_op_func(operator) == NULL) || (operator[1]))
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", get_op_func(operator)(num1, num2));
+	op_func = get_op_func(operator);
+	printf("%d\n", op_func(num1, num2));
 	return (0);
 }
