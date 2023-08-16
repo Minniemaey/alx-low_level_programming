@@ -32,7 +32,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(99);
 	}
 
-	op_func = get_op_func(operator);
-	printf("%d\n", op_func(num1, num2));
+	printf("%d\n", get_op_func(operator)(num1, num2));
 	return (0);
 }
