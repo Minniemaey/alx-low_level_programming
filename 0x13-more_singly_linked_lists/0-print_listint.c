@@ -6,6 +6,7 @@
   * @h: list to print elements
   * Return: number of list nodes
   */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
