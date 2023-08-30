@@ -31,12 +31,12 @@ void free_list(listp_t **head)
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t n = 0;
-	listint_t *node, *ptr, *new_node;
+	listp_t *node, *ptr, *new_node;
 
 	ptr = NULL;
 	while (head != NULL)
 	{
-		node = malloc(sizeof(listint_t));
+		node = malloc(sizeof(listp_t));
 
 		if (node == NULL)
 			exit(98);
