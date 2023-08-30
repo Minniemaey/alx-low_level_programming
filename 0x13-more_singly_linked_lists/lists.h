@@ -20,17 +20,17 @@ typedef struct listint_s
 } listint_t;
 
 /**
- * struct list_s - singly linked list
+ * struct listp_s - singly linked list
  * @p: pointers
  * @next: points to the next node
  *
  * Description: singly linked list pointers
  */
-typedef struct list_s
+typedef struct listp_s
 {
 	void *p;
-	struct list_s *next;
-} list_t;
+	struct listp_s *next;
+} listp_t;
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);

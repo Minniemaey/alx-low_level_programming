@@ -5,16 +5,16 @@
  * @head: head node
  *
  */
-void free_list(list_t **head)
+void free_list(listp_t **head)
 {
-	list_t *tmp, n_tmp;
+	listp_t *tmp, ntmp;
 
 	if (head)
 	{
-		n_tmp = *head;
-		while ((tmp = n_tmp) != NULL)
+		ntmp = *head;
+		while ((tmp = ntmp) != NULL)
 		{
-			tmp = n_tmp->next;
+			tmp = ntmp->next;
 			free(tmp);
 		}
 		*head = NULL;
