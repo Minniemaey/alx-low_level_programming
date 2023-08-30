@@ -3,7 +3,7 @@
  * _realloc - reallocates memory for pointers
  * @list: list to reallocate
  * @size: size of the new list
- * @new: new node
+ * @n: new node
  *
  * Return: pointer to new list
  */
@@ -28,7 +28,7 @@ listint_t **_realloc(listint_t **list, size_t size, listint_t *n)
 
 /**
  * free_listint_safe - frees list with loops
- * @h: pointer to head node
+ * @head: pointer to head node
  *
  * Return: number of elements
  */
