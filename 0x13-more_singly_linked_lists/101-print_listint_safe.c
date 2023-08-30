@@ -5,9 +5,9 @@
  * @head: head node
  *
  */
-void free_list(listint_t **head)
+void free_list(list_t **head)
 {
-	listint_t *tmp, n_tmp;
+	list_t *tmp, n_tmp;
 
 	if (head)
 	{
