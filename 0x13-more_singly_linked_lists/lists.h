@@ -20,11 +20,11 @@ typedef struct listint_s
 } listint_t;
 
 /**
- * struct listp_s - singly linked list
- * @p: pointers of nodes
+ * struct list_s - singly linked list
+ * @p: pointers
  * @next: points to the next node
  *
- * Description: singly linked list of pointers
+ * Description: singly linked list pointers
  */
 typedef struct list_s
 {
