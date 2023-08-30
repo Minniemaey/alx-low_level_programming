@@ -20,12 +20,14 @@ size_t free_listint_safe(listint_t **h)
 		if (n > 0)
 		{
 			tmp = (*h)->next;
+			free(*h);
 			*h = tmp;
 			loop++;
 		}
 		else
 		{
 			*h = NULL;
+			free(*h);
 			loop++;
 			break;
 		}
