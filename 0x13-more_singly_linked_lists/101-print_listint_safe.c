@@ -7,7 +7,7 @@
  */
 void free_list(listp_t **head)
 {
-	listp_t *tmp, ntmp;
+	listp_t *tmp, *ntmp;
 
 	if (head)
 	{
