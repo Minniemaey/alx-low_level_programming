@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[x])
 	{
-		if (b[x] == '1')
+		if (!(b[x] < '0' || b[x] > '1'))
 		{
 			y <<= 1;
 			y += b[x] - '0';
