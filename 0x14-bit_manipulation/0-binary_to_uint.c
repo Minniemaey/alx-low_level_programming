@@ -16,8 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (!(b[x] < '0' || b[x] > '1'))
 		{
-			y <<= 1;
-			y += b[x] - '0';
+			y = 2 * y + (b[i] - '0');
 			x++;
 		}
 		else
