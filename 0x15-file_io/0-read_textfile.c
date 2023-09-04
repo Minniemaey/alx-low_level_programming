@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	writefile = write(STDOUT_FILENO, buffer, readtext);
 
 	if (openfile == -1 || readtext == -1 ||
-			writefile != readtext || w == -1)
+			writefile != readtext || writefile == -1)
 	{
 		free(buffer);
 		return (0);
