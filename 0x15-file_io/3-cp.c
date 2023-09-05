@@ -1,4 +1,9 @@
-#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
 /**
  * cp_file - copies the content of a file to another file
  * @argc: number of arguments
