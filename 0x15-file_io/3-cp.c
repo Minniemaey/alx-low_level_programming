@@ -70,7 +70,6 @@ int cp_file(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
-
 		wfile = write(dest, buffer, rfile);
 		if (src == -1 || wfile == -1)
 		{
@@ -79,12 +78,9 @@ int cp_file(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-
 		rfile = read(src, buffer, 1024);
 		dest = open(argv[2], O_WRONLY | O_APPEND);
-
 	} while (r > 0);
-
 	free(buffer);
 	error_and_exit(src);
 	error_and_exit(dest);
