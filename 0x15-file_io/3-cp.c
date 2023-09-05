@@ -1,5 +1,8 @@
 #include "main.h"
 
+char *_alloc(char *buff);
+void error_and_exit(int desc);
+
 /**
  * _alloc - Allocates bytes to  buffer
  * @buff: buffer name
