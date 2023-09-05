@@ -5,13 +5,13 @@
 #include <unistd.h>
 
 /**
- * cp_file - copies the content of a file to another file
+ * main - copies the content of a file to another file
  * @argc: number of arguments
  * @argv: argument vector
  * Return: Always 0
  */
 
-int cp_file(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int src, dest, rfile, wfile;
 	char *buffer[1024];
