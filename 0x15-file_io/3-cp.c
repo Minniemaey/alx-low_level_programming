@@ -14,13 +14,12 @@
 int main(int argc, char *argv[])
 {
 	int src, dest, rfile, wfile;
-	char *buffer[1024];
+	char buffer[1024];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	src = open(argv[1], O_RDONLY, 0);
 	dest = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	rfile = read(src, buffer, 1024);
 	if (src == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -30,7 +29,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	while (rfile > 0)
+	while ((rfile = read(src, buffer, 1024)) > 0)
 	{
 		wfile = write(dest, buffer, rfile);
 		if (wfile != rfile)
