@@ -27,13 +27,13 @@ char *_alloc(char *buff)
  */
 void error_and_exit(int desc)
 {
-	int exit;
+	int f_exit;
 
-	exit = close(desc);
+	f_exit = close(desc);
 
-	if (exit == -1)
+	if (f_exit == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", exit);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_exit);
 		exit(100);
 	}
 }
@@ -57,7 +57,7 @@ int cp_file(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buffer = _alloc(argv[2]);
 	src = open(argv[1], O_RDONLY);
 	rfile = read(src, buffer, 1024);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -80,7 +80,7 @@ int cp_file(int argc, char *argv[])
 		}
 		rfile = read(src, buffer, 1024);
 		dest = open(argv[2], O_WRONLY | O_APPEND);
-	} while (r > 0);
+	} while (rfile > 0);
 	free(buffer);
 	error_and_exit(src);
 	error_and_exit(dest);
